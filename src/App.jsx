@@ -4,6 +4,7 @@ import { Check, Shield, Smartphone, BellRing, IdCard, MapPin, HeartHandshake, Qr
 import { Button } from "./components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./components/ui/card";
 import { Input } from "./components/ui/input";
+import ConsentModal from "./ConsentModal";
 
 const features = [
   {
@@ -85,6 +86,66 @@ const tiers = [
 ];
 
 export default function App() {
+   // --- Consent & Verify (demo wiring) ---
+  const [consentOpen, setConsentOpen] = React.useState(false);
+  const [qrOpen, setQrOpen] = React.useState(false);
+  const [qrUrl, setQrUrl] = React.useState("");
+  const [meetId, setMeetId] = React.useState("");
+  const [busy, setBusy] = React.useState(false);
+
+  // Open consent modal
+  function onStartMeetingClick() {
+    setConsentOpen(true);
+  }
+
+  // Submit consent to server
+  async function handleConsentConfirm({ video, audio, bio, age }) {
+    try {
+      setBusy(true);
+      const res = await fetch("/api/meeting_consent", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          userId: "demo-user-1",
+          meetingId: "demo-meeting-1",
+          consentVideo: !!video,
+          consentAudio: !!audio,
+          consentBiometric: !!bio,
+          ageAttestation: !!age,
+        }),
+      });
+      const j = await res.json();
+      if (!j.ok) throw new Error(j.error || "Consent failed");
+      setConsentOpen(false);
+      alert("✅ Consent saved for this meeting.");
+    } catch (e) {
+      alert("❌ " + e.message);
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  // Start “Verify Me (QR)” flow
+  async function startVerifyQR() {
+    try {
+      setBusy(true);
+      const res = await fetch("/api/meet_start", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ targetUserId: "demo-user-1" }),
+      });
+      const j = await res.json();
+      if (!j.meetId || !j.qrUrl) throw new Error("Could not start meet");
+      setMeetId(j.meetId);
+      setQrUrl(j.qrUrl);
+      setQrOpen(true);
+    } catch (e) {
+      alert("❌ " + e.message);
+    } finally {
+      setBusy(false);
+    }
+  }
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-brand-50 via-white to-brand-400 text-slate-900">
       <header className="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-slate-200">
