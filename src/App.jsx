@@ -97,7 +97,7 @@ export default function App() {
     className="min-h-screen text-gray-100 bg-cover bg-center bg-fixed"
     style={{
       backgroundImage:
-        "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/background.png.png')",
+        "linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)), url('/background.png.png')",
     }}
   >
       <header className="sticky top-0 z-40 backdrop-blur-md bg-black/30 border-b border-white/10">
