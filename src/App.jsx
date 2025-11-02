@@ -156,7 +156,7 @@ export default function App() {
 
   return (
   <div
-    className="min-h-screen bg-gradient-to-b from-black/60 via-black/40 to-black/20 text-white bg-cover bg-center bg-fixed"
+    className="min-h-screen bg-gradient-to-b from-black/70 via-black/50 to-black/30 text-gray-100 bg-cover bg-center bg-fixed"
     style={{ backgroundImage: "url('/background.png.png')" }}
   >
     {/* NAV */}
@@ -234,7 +234,7 @@ export default function App() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="relative"
           >
-            <div className="rounded-3xl bg-white shadow-xl p-4 md:p-6 border border-slate-200">
+            <div className="rounded-3xl bg-white/10 backdrop-blur-md shadow-xl p-4 md:p-6 border border-white/20 text-gray-100">
               <div className="grid grid-cols-2 gap-3 text-sm">
                 <Card className="rounded-2xl">
                   <CardHeader className="pb-2"><CardTitle className="text-base flex items-center gap-2"><Shield className="h-4 w-4" /> Verify</CardTitle></CardHeader>
