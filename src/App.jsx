@@ -92,14 +92,14 @@ export default function App() {
     }
   }
 
-  return (
-    <div
-      className="min-h-screen text-gray-100 bg-cover bg-center bg-fixed"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)), url('/background.png.png')",
-      }}
-    >
+ return (
+  <div
+    className="min-h-screen text-gray-100 bg-cover bg-center bg-fixed"
+    style={{
+      backgroundImage:
+        "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/background.png.png')",
+    }}
+  >
       <header className="sticky top-0 z-40 backdrop-blur-md bg-black/30 border-b border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
