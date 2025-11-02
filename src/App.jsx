@@ -155,11 +155,12 @@ export default function App() {
   }
 
   return (
-    <div
+  <div
     className="min-h-screen bg-gradient-to-b from-brand-100 via-brand-50 to-brand-400 text-slate-900 bg-cover bg-center bg-fixed"
-    style={{ backgroundImage: "url('/background.png')" }}
-      {/* NAV */}
-      <header className="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-slate-200">
+    style={{ backgroundImage: "url('/background.png.png')" }}
+  >
+    {/* NAV */}
+    <header className="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-slate-200">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="h-9 w-9 rounded-2xl bg-brand-600 text-white grid place-items-center font-bold">MSA</div>
