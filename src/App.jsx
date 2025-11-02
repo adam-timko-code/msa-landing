@@ -133,23 +133,21 @@ export default function App() {
 
         {/* New Action Buttons */}
         <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3">
-          <Button
-            variant="secondary"
-            className="rounded-2xl"
-            onClick={onStartMeetingClick}
-            disabled={busy}
-          >
-            Start meeting (consent)
-          </Button>
-          <Button
-            variant="ghost"
-            className="rounded-2xl"
-            onClick={startVerifyQR}
-            disabled={busy}
-          >
-            Verify Me (QR)
-          </Button>
-        </div>
+  <Button
+    className="rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-500 to-brand-400 text-white font-semibold shadow-md hover:shadow-lg transition"
+    onClick={onStartMeetingClick}
+    disabled={busy}
+  >
+    Start Meeting (Consent)
+  </Button>
+  <Button
+    className="rounded-2xl bg-gradient-to-r from-brand-500 via-teal-400 to-brand-300 text-white font-semibold shadow-md hover:shadow-lg transition"
+    onClick={startVerifyQR}
+    disabled={busy}
+  >
+    Verify Me (QR)
+  </Button>
+</div>
       </section>
 
       {/* Features Grid */}
