@@ -232,51 +232,6 @@ export default function App() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="relative"
           >
-            <div className="rounded-3xl bg-white/10 backdrop-blur-md shadow-xl p-5 md:p-6 border border-white/15 text-gray-100">
-              <div className="grid grid-cols-2 gap-3 text-sm">
-                <Card className="rounded-2xl bg-white/10 border border-white/15 text-gray-100">
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-base flex items-center gap-2">
-                      <Shield className="h-4 w-4" /> Verify
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-gray-200">
-                    ID + selfie match builds trust without oversharing.
-                  </CardContent>
-                </Card>
-                <Card className="rounded-2xl bg-white/10 border border-white/15 text-gray-100">
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-base flex items-center gap-2">
-                      <MapPin className="h-4 w-4" /> Plan
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-gray-200">
-                    Send a safety brief: where, when, and who you’re meeting.
-                  </CardContent>
-                </Card>
-                <Card className="rounded-2xl bg-white/10 border border-white/15 text-gray-100">
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-base flex items-center gap-2">
-                      <BellRing className="h-4 w-4" /> Check-in
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-gray-200">
-                    Automatic check-ins with quick replies or safe words.
-                  </CardContent>
-                </Card>
-                <Card className="rounded-2xl bg-white/10 border border-white/15 text-gray-100">
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-base flex items-center gap-2">
-                      <Smartphone className="h-4 w-4" /> SOS
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-gray-200">
-                    Silent SOS shares live location and calls your people.
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
