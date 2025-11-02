@@ -397,30 +397,40 @@ export default function App() {
 
       {/* QR DIALOG */}
       {qrOpen && (
-        <dialog open className="rounded-2xl p-0 w-[92vw] max-w-md border border-slate-200 shadow-2xl">
-          <div className="p-6">
-            <h3 className="text-xl font-bold mb-1">Verify Me</h3>
-            <p className="text-slate-600 mb-4">Have the other person scan this QR to open your verification page.</p>
-            {qrUrl ? (
-              <div className="flex flex-col items-center gap-3">
-                <img
-                  alt="QR code"
-                  width="240"
-                  height="240"
-                  src={`https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(qrUrl)}`}
-                />
-                <a className="text-sm text-brand-700 underline break-all" href={qrUrl} target="_blank" rel="noreferrer">
-                  {qrUrl}
-                </a>
-                <p className="text-xs text-slate-500">Meet ID: {meetId}</p>
-              </div>
-            ) : <p>Generating QR…</p>}
-            <div className="mt-6 flex justify-end gap-2">
-              <Button variant="ghost" onClick={() => setQrOpen(false)}>Close</Button>
-            </div>
-          </div>
-        </dialog>
+  <div className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4">
+    <div className="bg-white rounded-2xl w-[92vw] max-w-md border border-slate-200 shadow-2xl p-6 animate-fadeIn">
+      <h3 className="text-xl font-bold mb-1">Verify Me</h3>
+      <p className="text-slate-600 mb-4">
+        Have the other person scan this QR to open your verification page.
+      </p>
+
+      {qrUrl ? (
+        <div className="flex flex-col items-center gap-3">
+          <img
+            alt="QR code"
+            width="240"
+            height="240"
+            src={`https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(qrUrl)}`}
+          />
+          <a
+            className="text-sm text-brand-700 underline break-all"
+            href={qrUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {qrUrl}
+          </a>
+          <p className="text-xs text-slate-500">Meet ID: {meetId}</p>
+        </div>
+      ) : (
+        <p>Generating QR…</p>
       )}
+
+      <div className="mt-6 flex justify-end gap-2">
+        <Button variant="ghost" onClick={() => setQrOpen(false)}>
+          Close
+        </Button>
+      </div>
     </div>
-  );
-}
+  </div>
+)}
