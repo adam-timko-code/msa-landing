@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
- theme: {
+  theme: {
     extend: {
       colors: {
         brand: {
@@ -21,11 +21,15 @@ export default {
         subtle: '0 2px 4px rgba(0,0,0,0.08)',
         focus: '0 4px 10px rgba(79,70,229,0.25)',
       },
-     backgroundImage: {
-  'btn-primary': 'linear-gradient(to right, #4f46e5, #6366f1)',  // Indigo blend
-  'btn-secondary': 'linear-gradient(to right, #6366f1, #818cf8)', // Softer indigo tint
-},
+      backgroundImage: {
+        'btn-primary': 'linear-gradient(to right, #4f46e5, #6366f1)',
+        // choose ONE of the two below — uncomment the one you want:
+        // Softer indigo tint:
+        'btn-secondary': 'linear-gradient(to right, #6366f1, #818cf8)',
+        // Or silvery neutral:
+        // 'btn-secondary': 'linear-gradient(to right, #64748b, #94a3b8)',
+      },
     },
   },
   plugins: [],
-}
+};
