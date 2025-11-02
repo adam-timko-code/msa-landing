@@ -155,7 +155,9 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-brand-100 via-brand-50 to-brand-400 text-slate-900">
+    <div
+    className="min-h-screen bg-gradient-to-b from-brand-100 via-brand-50 to-brand-400 text-slate-900 bg-cover bg-center bg-fixed"
+    style={{ backgroundImage: "url('/background.png')" }}
       {/* NAV */}
       <header className="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-slate-200">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
