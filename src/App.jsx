@@ -194,22 +194,22 @@ export default function App() {
               privacy-first tools that turn first meets into safer meets.
             </p>
 
-            <div className="mt-6 flex flex-col sm:flex-row gap-3">
-  <Button className="rounded-2xl bg-white/10 text-white hover:bg-white/20">
+           <div className="mt-6 flex flex-col sm:flex-row flex-wrap gap-3">
+  <Button className="rounded-2xl bg-white/10 text-white hover:bg-white/20 transition-all duration-200">
     Try the demo <ArrowRight className="ml-2 h-4 w-4" />
   </Button>
-  <Button className="rounded-2xl bg-white/10 text-white hover:bg-white/20">
+  <Button className="rounded-2xl bg-white/10 text-white hover:bg-white/20 transition-all duration-200">
     Watch 90-sec overview
   </Button>
   <Button
-    className="rounded-2xl bg-white/10 text-white hover:bg-white/20"
+    className="rounded-2xl bg-white/10 text-white hover:bg-white/20 transition-all duration-200"
     onClick={onStartMeetingClick}
     disabled={busy}
   >
     Start Meeting (Consent)
   </Button>
   <Button
-    className="rounded-2xl bg-white/10 text-white hover:bg-white/20"
+    className="rounded-2xl bg-white/10 text-white hover:bg-white/20 transition-all duration-200"
     onClick={startVerifyQR}
     disabled={busy}
   >
