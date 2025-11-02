@@ -434,6 +434,6 @@ export default function App() {
           </div>
         </div>
       )}
-    </div> {/* closes the outermost wrapper div */}
+    </div>
   );
-} {/* closes export default function App() */}
+}
