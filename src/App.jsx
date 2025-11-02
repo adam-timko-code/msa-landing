@@ -95,10 +95,7 @@ export default function App() {
  return (
   <div
     className="min-h-screen text-gray-100 bg-cover bg-center bg-fixed"
-    style={{
-      backgroundImage:
-        "linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)), url('/background.png.png')",
-    }}
+    style={{ backgroundImage: "url('/background.png.png')" }}
   >
       <header className="sticky top-0 z-40 backdrop-blur-md bg-black/30 border-b border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
