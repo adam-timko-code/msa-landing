@@ -203,21 +203,21 @@ export default function App() {
 
             {/* Dual Action Buttons */}
             <div className="mt-6 flex flex-col sm:flex-row justify-start gap-3">
-              <Button
-                className="rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-500 to-brand-400 text-white font-semibold shadow-md hover:shadow-lg transition"
-                onClick={onStartMeetingClick}
-                disabled={busy}
-              >
-                Start Meeting (Consent)
-              </Button>
-              <Button
-                className="rounded-2xl bg-gradient-to-r from-brand-500 via-teal-400 to-brand-300 text-white font-semibold shadow-md hover:shadow-lg transition"
-                onClick={startVerifyQR}
-                disabled={busy}
-              >
-                Verify Me (QR)
-              </Button>
-            </div>
+  <Button
+    className="rounded-2xl bg-gradient-to-r from-indigo-700 to-indigo-500 text-white font-semibold shadow-sm hover:shadow-md hover:brightness-110 transition-all duration-200"
+    onClick={onStartMeetingClick}
+    disabled={busy}
+  >
+    Start Meeting (Consent)
+  </Button>
+  <Button
+    className="rounded-2xl bg-gradient-to-r from-slate-700 to-slate-500 text-white font-semibold shadow-sm hover:shadow-md hover:brightness-110 transition-all duration-200"
+    onClick={startVerifyQR}
+    disabled={busy}
+  >
+    Verify Me (QR)
+  </Button>
+</div>
 
             <div className="mt-6 flex items-center gap-4 text-sm text-slate-600">
               <div className="flex items-center gap-2"><Check className="h-4 w-4" /> No tracking between meets</div>
