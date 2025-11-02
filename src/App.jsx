@@ -156,7 +156,7 @@ export default function App() {
 
   return (
   <div
-    className="min-h-screen bg-gradient-to-b from-brand-100 via-brand-50 to-brand-400 text-slate-900 bg-cover bg-center bg-fixed"
+    className="min-h-screen bg-gradient-to-b from-black/60 via-black/40 to-black/20 text-white bg-cover bg-center bg-fixed"
     style={{ backgroundImage: "url('/background.png.png')" }}
   >
     {/* NAV */}
