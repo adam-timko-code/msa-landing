@@ -195,31 +195,27 @@ export default function App() {
             </p>
 
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <Button className="rounded-2xl bg-white/10 text-white hover:bg-white/20">
-                Try the demo <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button className="rounded-2xl bg-gradient-to-r from-indigo-600 to-indigo-500 text-white">
-                Watch 90-sec overview
-              </Button>
-            </div>
-
-            <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <Button
-                className="rounded-2xl bg-gradient-to-r from-indigo-600 to-indigo-500 text-white"
-                onClick={onStartMeetingClick}
-                disabled={busy}
-              >
-                Start Meeting (Consent)
-              </Button>
-              <Button
-                className="rounded-2xl bg-gradient-to-r from-slate-500 to-slate-400 text-white"
-                onClick={startVerifyQR}
-                disabled={busy}
-              >
-                Verify Me (QR)
-              </Button>
-            </div>
-
+  <Button className="rounded-2xl bg-white/10 text-white hover:bg-white/20">
+    Try the demo <ArrowRight className="ml-2 h-4 w-4" />
+  </Button>
+  <Button className="rounded-2xl bg-white/10 text-white hover:bg-white/20">
+    Watch 90-sec overview
+  </Button>
+  <Button
+    className="rounded-2xl bg-white/10 text-white hover:bg-white/20"
+    onClick={onStartMeetingClick}
+    disabled={busy}
+  >
+    Start Meeting (Consent)
+  </Button>
+  <Button
+    className="rounded-2xl bg-white/10 text-white hover:bg-white/20"
+    onClick={startVerifyQR}
+    disabled={busy}
+  >
+    Verify Me (QR)
+  </Button>
+</div>
             <div className="mt-6 flex items-center gap-4 text-sm text-gray-300">
               <div className="flex items-center gap-2">
                 <Check className="h-4 w-4" /> No tracking between meets
