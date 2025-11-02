@@ -204,14 +204,14 @@ export default function App() {
             {/* Dual Action Buttons */}
             <div className="mt-6 flex flex-col sm:flex-row justify-start gap-3">
   <Button
-    className="rounded-2xl bg-gradient-to-r from-indigo-700 to-indigo-500 text-white font-semibold shadow-sm hover:shadow-md hover:brightness-110 transition-all duration-200"
+    className="rounded-2xl bg-btn-primary text-white font-semibold shadow-subtle hover:shadow-focus hover:brightness-110 transition-all duration-200"
     onClick={onStartMeetingClick}
     disabled={busy}
   >
     Start Meeting (Consent)
   </Button>
   <Button
-    className="rounded-2xl bg-gradient-to-r from-slate-700 to-slate-500 text-white font-semibold shadow-sm hover:shadow-md hover:brightness-110 transition-all duration-200"
+    className="rounded-2xl bg-btn-secondary text-white font-semibold shadow-subtle hover:shadow-focus hover:brightness-110 transition-all duration-200"
     onClick={startVerifyQR}
     disabled={busy}
   >
