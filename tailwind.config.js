@@ -21,10 +21,10 @@ export default {
         subtle: '0 2px 4px rgba(0,0,0,0.08)',
         focus: '0 4px 10px rgba(79,70,229,0.25)',
       },
-      backgroundImage: {
-        'btn-primary': 'linear-gradient(to right, #4f46e5, #6366f1)',
-        'btn-secondary': 'linear-gradient(to right, #3f3f46, #52525b)',
-      },
+     backgroundImage: {
+  'btn-primary': 'linear-gradient(to right, #4f46e5, #6366f1)',  // Indigo blend
+  'btn-secondary': 'linear-gradient(to right, #6366f1, #818cf8)', // Softer indigo tint
+},
     },
   },
   plugins: [],
